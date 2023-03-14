@@ -1,18 +1,8 @@
-import React from "react";
 import Item from "./Item";
 import style from './taskList.module.scss';
+import { ITask } from "../../types/task";
 
-function TaskList() {
-  const taskList = [{
-    task: 'React',
-    time: '01:00:00'
-  }, {
-    task: 'JavaScript',
-    time: '02:00:00'
-  }, {
-    task: 'TypeScript',
-    time: '02:00:00'
-  }]
+function TaskList({taskList}: {taskList: ITask[]}) {
   
   return (
     <aside className={style.taskList}>
